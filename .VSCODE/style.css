@@ -20,6 +20,7 @@ body {
   /*background: image repeat position/cover*/
 
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 #container {
@@ -155,3 +156,15 @@ footer {
      --swtch-bg-url: url(./assets/sun.svg)
 }
 
+
+/* media queries*/
+
+@media (min-width: 700px){
+  :root{
+    --bg-url: url(./assets/bg.jpg);
+  }
+
+  .ligth{
+    --bg-url: url(./assets/bg-light.jpg);
+  }
+}
