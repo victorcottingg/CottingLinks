@@ -59,7 +59,12 @@ body {
   left: 0; 
   transform: translateY(-50%);
   position: absolute; /* position absolute me libera diversos lugares onde eu colocar meu botao ou o que eu estiver mexendo*/
+  animation: slide-back 0.4s;
   
+}
+#switch button:hover{
+
+  outline: 8px solid var(--highlight-color);
 }
 #switch span {
   display: block;
@@ -68,11 +73,11 @@ width: 64px;
 height: 24px;
 background: var(--surface-color);
 border: var(--stronk-color);
+
 }
 
 .ligth #switch button{
-right: 0; 
-left: initial;
+animation: slide-in 0.4s forwards;
 }
 
 
@@ -168,3 +173,22 @@ footer {
     --bg-url: url(./assets/bg-light.jpg);
   }
 }
+/*animações*/
+@keyframes slide-in{
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%
+  }
+}
+
+@keyframes slide-back{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
+  }
+}
+
