@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: "Dai Banna SIL", serif;
+  font-family: "Lisu Bosa", serif;
+  color: var(--text-color);
+}
+
+body {
+  /*background-image:url(./assets/bg-mobile\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-position: top center
+    background-size: cover;
+    isso pode ser reduzido para*/
+
+  /*background: image repeat position/cover*/
+
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+#container {
+  width: 360px;
+  margin: 56px auto 0px auto;
+  padding: 0 24px;
+}
+#profile {
+  /*apenas para display inline*/
+  text-align: center;
+  margin: auto auto 24px 0px;
+}
+
+#profile img {
+  width: 112px;
+  padding: 24px;
+}
+#profile p {
+  font-size: 16px;
+  font-weight: 400;
+}
+#switch {
+  position: relative; /*position relative faz com que o position absolute funcione apenas na caixa*/
+  width: 64px;
+  margin: 4px auto;
+
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--swtch-bg-url) no-repeat center;
+  border: none;  
+  border-radius: 50%;  
+  top: 50%;
+  left: 0; 
+  transform: translateY(-50%);
+  position: absolute; /* position absolute me libera diversos lugares onde eu colocar meu botao ou o que eu estiver mexendo*/
+  
+}
+#switch span {
+  display: block;
+  border-radius: 9999px;
+width: 64px;
+height: 24px;
+background: var(--surface-color);
+border: var(--stronk-color);
+}
+
+.ligth #switch button{
+right: 0; 
+left: initial;
+}
+
+
+
+/*link - lista*/
+ul {
+  list-style: none;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0px;
+}
+ul li a {
+  display: flex;
+  justify-content: center;
+  /* text-align: center funciona tambem*/
+  align-items: center;
+  /*align-items: center; alinha os items da linha*/
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stronk-color);
+  border-radius: 8px; /*arredondamento de borda*/
+  backdrop-filter: blur(4px); /*modelo de filtro, deixa embaçado*/
+  text-decoration: none; /*tirar decoração ou colocar decoração*/
+  font-weight: 500;
+  transition: background 0.5s; /*transionar, atrasar atualização para animação*/
+}
+/* pseudo-seletor */
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0px;
+  font-size: 24px;
+  gap: 16px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.8s;
+  border-radius: 50%;
+}
+#social-links a:hover {
+  background-color: var(--highlight-color);
+}
+footer {
+  padding: 24px;
+}
+#rodapé {
+  text-align: center;
+}
+#rodapé a {
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile\ \(1\).jpg);
+  --stronk-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover:  rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --swtch-bg-url: url(./assets/moon-stars.svg)
+}
+.ligth {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-ligth.jpg);
+  --stronk-color: rgba(0, 0, 0, 0.50);
+    --surface-color: rgba(0, 0, 0, 0.05);
+     --surface-color-hover: (0, 0, 0, 0.02);
+     --highlight-color: rgba(0, 0, 0, 0.1);
+     --swtch-bg-url: url(./assets/sun.svg)
+}
+
